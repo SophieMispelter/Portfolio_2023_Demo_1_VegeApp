@@ -1,6 +1,7 @@
 VegeApp
 
-Ticket 1 - Design of Header and Header Cart Components
+Ticket 1 - Creation of Header component
+Ticket 2 - Creation of HeaderCartButton Component
 Ticket 2 - Integration of VegeApp’s description Card component
 Ticket 3 - Design and Integration of Menu and Meal components + creation of data file before adding Firebase to the project
 Ticket 4 - Integration of Footer component (mentions légales / Contact / Adresse / Réseaux Sociaux ( icônes FB/ insta / Trip Advisor))
