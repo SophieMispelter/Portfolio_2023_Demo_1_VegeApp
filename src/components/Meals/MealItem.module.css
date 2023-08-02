@@ -1,0 +1,17 @@
+.meal span {
+  font-weight: bold;
+  line-height: 28px;
+}
+
+.description {
+  font-style: italic;
+  margin-bottom: 0.5rem;
+}
+
+.order-container {
+  /* border: green 1px solid; */
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 0.5rem;
+}

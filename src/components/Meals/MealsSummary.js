@@ -4,7 +4,7 @@ import classes from "./MealsSummary.module.css";
 const MealsSummary = () => {
   return (
     <section className={classes.summary}>
-      <h3>VegeApp: Livraison Rapide de Repas Végétariens Savoureux</h3>
+      <h2>VegeApp: Livraison Rapide de Repas Végétariens Savoureux</h2>
       <p>Découvrez notre appli de livraison de repas végétariens.</p>
       <p>
         Commandez des plats équilibrés et préparés avec des ingrédients de

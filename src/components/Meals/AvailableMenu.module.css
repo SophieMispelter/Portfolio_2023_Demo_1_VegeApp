@@ -1,0 +1,6 @@
+.meals {
+  /* border: green 1px solid; */
+  margin-top: 5rem;
+  display: flex;
+  justify-content: space-around;
+}

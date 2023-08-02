@@ -1,0 +1,29 @@
+.card {
+  max-width: 30rem;
+  padding: 1rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+  border-radius: 14px;
+  background-color: white;
+}
+
+.card ul {
+  list-style: none;
+  /* margin: 0; */
+  padding: 0;
+}
+
+.line {
+  border-bottom: #99e2d0 1px solid;
+  transform-origin: left;
+  animation: 10s infinite alternate line;
+}
+
+@keyframes line {
+  0% {
+    transform: scaleX(0.2);
+  }
+  100% {
+    transform: scaleX(1);
+    opacity: 0.9;
+  }
+}
