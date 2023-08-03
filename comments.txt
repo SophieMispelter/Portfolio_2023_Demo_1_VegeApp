@@ -5,7 +5,7 @@ Ticket 2 - Creation of HeaderCartButton Component
 Ticket 3 - Integration of VegeApp’s description Card component
 Ticket 4 - Design and Integration of Menu and Meal components + creation of data file before adding Firebase to the project
 Ticket 5 - Integration of Footer component (Social Network ( FB/ insta / Trip Advisor icons) / Legal Terms / Contact)
-Ticket 6 - Integration of Order modal and OrderItem via React Portal and Backdrop (maybe using a onClose state on Modal and Backdrop)
+Ticket 6 - Integration of Modal and Cart components via React Portal and Backdrop (maybe using an onClose state on Modal and Backdrop)
 Ticket 7 - Validation on the Shopping Cart (display conditionally content with an isOrdered state)
 Ticket 8 - Implementation of Cart Context and Cart Reducer with useRef to handle amount ordered = ADD order
 Ticket 9 - Implementation of the logic to REMOVE item in the Cart component
