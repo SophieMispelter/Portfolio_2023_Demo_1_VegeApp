@@ -20,20 +20,7 @@ const Cart = () => {
     </ul>
   );
 
-  //datas:
-  const text = "test";
-  const text2 = "test 2";
-
-  /* REMINDER - How to pass data from Parent to Child Component: props or props.children */
-
-  /* 1) 3) & 4) passing data from Cart to Modal with props */
-  //   return <Modal data={text} />;
-
-  /* 2) 5) & 6) passing data from parent Cart component to child Modal component with props.children */
-  //   return <Modal>{text}</Modal>;
-
-  // 7) passing datas from Cart to Modal using props or props.children method for each data
-  return <Modal data={text}>{text2}</Modal>;
+  return <Modal>{cartItems}</Modal>;
 };
 
 export default Cart;

@@ -1,9 +1,9 @@
 import classes from "./HeaderCartButton.module.css";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 
-const HeaderCartButton = () => {
+const HeaderCartButton = (props) => {
   return (
-    <button className={classes.button}>
+    <button className={classes.button} onClick={props.onClickCartButton}>
       <span>
         <ShoppingCartIcon />
       </span>

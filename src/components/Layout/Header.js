@@ -3,12 +3,12 @@ import classes from "./Header.module.css";
 import mealsImage from "../../assets/veggie_lifestyle_5.jpg";
 import HeaderCartButton from "./HeaderCartButton";
 
-const Header = () => {
+const Header = (props) => {
   return (
     <Fragment>
       <header className={classes.header}>
         <h1>VegeApp</h1>
-        <HeaderCartButton />
+        <HeaderCartButton onClickCartButton={props.onShowCart} />
       </header>
       <div className={classes["main-image"]}>
         <img
