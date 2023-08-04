@@ -1,30 +1,28 @@
 import React from "react";
 import classes from "./Cart.module.css";
 import Modal from "../UI/Modal";
+import CartItem from "./CartItem";
+import CartList from "./CartList";
 
 const Cart = (props) => {
-  const cartItems = (
-    <ul className={classes["cart-items"]}>
-      {[
-        {
-          id: 1,
-          name: "Festin Rustique",
-          price: "€7.50",
-          amount: "x1",
-        },
-      ].map((item) => (
-        <li key={item.id}>
-          {item.name} {item.price} {item.amount}
-        </li>
-      ))}
-    </ul>
-  );
-
-  // return <Modal onCloseModal={props.onClose}>{cartItems}</Modal>;
+  const STARTERS_LIST = [
+    {
+      id: 1,
+      name: "Velouté de Légumes Gourmand",
+      price: 3.7,
+      amount: "x1",
+    },
+    {
+      id: 2,
+      name: "Bruschettas Méditerranéennes",
+      price: 4.2,
+      amount: "x1",
+    },
+  ];
 
   return (
     <Modal onCloseModal={props.onClose}>
-      {cartItems}
+      <CartList data={STARTERS_LIST} title="Entrées" />
       <div className={classes.total}>
         <span>Total Amount</span>
         <span>€0</span>

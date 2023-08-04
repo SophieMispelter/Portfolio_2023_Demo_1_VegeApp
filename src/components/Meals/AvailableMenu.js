@@ -8,7 +8,7 @@ const STARTER_MEALS = [
     name: "Velouté de Légumes Gourmand",
     description:
       "Une soupe onctueuse à la courge butternut et aux carottes, relevée de notes chaudes de cannelle et de muscade.",
-    price: 3.70,
+    price: 3.7,
   },
   {
     id: 2,
