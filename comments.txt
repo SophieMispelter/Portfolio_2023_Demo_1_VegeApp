@@ -6,14 +6,15 @@ Ticket 3 - Integration of VegeApp’s description Card component
 Ticket 4 - Design and Integration of Menu and Meal components + creation of data file before adding Firebase to the project
 Ticket 5 - Integration of Footer component (Social Network ( FB/ insta / Trip Advisor icons) / Legal Terms / Contact)
 Ticket 6 - Integration of Modal (+ Backdrop) and Cart components via React Portal (using two states for handling the Cart component display)
-Ticket 7 - Validation on the Shopping Cart (display conditionally content with an isOrdered state)
-Ticket 8 - Implementation of Cart Context and Cart Reducer with useRef to handle amount ordered = ADD order
-Ticket 9 - Implementation of the logic to REMOVE item in the Cart component
-Ticket 10 - Add CSS animation when order is added using the useEffect() hook in HeaderCartButton component
+Ticket 7 - Update Modal Content with Order Confirmation when user validates its Order (manage state and add CSS animation) 
+Ticket 8 - Validation on the Shopping Cart (display conditionally content with an isOrdered state)
+Ticket 9 - Implementation of Cart Context and Cart Reducer with useRef to handle amount ordered = ADD order
+Ticket 10 - Implementation of the logic to REMOVE item in the Cart component
+Ticket 11 - Add CSS animation when order is added using the useEffect() hook in HeaderCartButton component
 
 [Additional Tickets]
-Ticket 11 - Footer:
+Ticket 12 - Footer:
 * creation and implementation of Contact Form Component
 * creation and implementation of Validation Modal when Contact Form is submitted
-Ticket 11 - Improve CSS
-Ticket 12 - Add bilingual feature (French/English) to the app
+Ticket 13 - Responsive and Improve CSS 
+Ticket 14 - Add bilingual feature (French/English) to the app
