@@ -30,7 +30,7 @@
   border: 1px solid #8a2b06;
   padding: 0.5rem 2rem;
   border-radius: 25px;
-  /* margin-left: 1rem; */
+  margin-left: 1rem;
 }
 
 .actions button:hover,
@@ -42,4 +42,51 @@
 
 .actions .button--alt {
   color: #8a2b06;
+}
+
+.actions .order-button {
+  background-color: #8a2b06;
+  font: inherit;
+  font-weight: bold;
+  color: white;
+}
+.order-text {
+  /* border: purple 1px solid; */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #99e2d0;
+  /* padding: 1rem 0; */
+  padding-bottom: 0.75rem;
+  margin: 1rem 0;
+}
+
+ul {
+  list-style-type: none;
+}
+
+.order-icon {
+  /* border: orange 1px solid; */
+  display: flex;
+  justify-content: center;
+}
+
+.icon {
+  color: #289672;
+  font-size: 70px;
+  animation-name: iconAnimation;
+  animation-duration: 1s;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-in-out;
+}
+
+@keyframes iconAnimation {
+  0% {
+    transform: translateX(-200px) scale(0.2);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0) scale(1);
+    opacity: 1;
+  }
 }

@@ -1,7 +1,6 @@
 import React from "react";
 import classes from "./CartList.module.css";
 import CartItem from "./CartItem";
-import TapasIcon from "@mui/icons-material/Tapas";
 
 const CartList = (props) => {
   const cartItems = props.data.map((cartItem) => (
@@ -18,7 +17,6 @@ const CartList = (props) => {
     <div className={classes["cart-list"]}>
       <div className={classes["list-intro"]}>
         <h3> {props.title} </h3>
-        {/* <TapasIcon /> */}
       </div>
       <div className={classes.line}></div>
       <ul>{cartItems}</ul>

@@ -7,8 +7,8 @@ Ticket 4 - Design and Integration of Menu and Meal components + creation of data
 Ticket 5 - Integration of Footer component (Social Network ( FB/ insta / Trip Advisor icons) / Legal Terms / Contact)
 Ticket 6 - Integration of Modal (+ Backdrop) and Cart components via React Portal (using two states for handling the Cart component display)
 Ticket 7 - Update Modal Content with Order Confirmation when user validates its Order (manage state and add CSS animation) 
-Ticket 8 - Validation on the Shopping Cart (display conditionally content with an isOrdered state)
-Ticket 9 - Implementation of Cart Context and Cart Reducer with useRef to handle amount ordered = ADD order
+Ticket 8 - Validation on the Shopping Cart (content is updated with useState)
+Ticket 9 - Implementation of Cart Context and Cart Reducer with useRef to handle dynamically orders
 Ticket 10 - Implementation of the logic to REMOVE item in the Cart component
 Ticket 11 - Add CSS animation when order is added using the useEffect() hook in HeaderCartButton component
 

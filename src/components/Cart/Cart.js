@@ -1,8 +1,8 @@
-import React from "react";
+import React, { useState } from "react";
 import classes from "./Cart.module.css";
 import Modal from "../UI/Modal";
-import CartItem from "./CartItem";
 import CartList from "./CartList";
+import { BsSendCheckFill } from "react-icons/bs";
 
 const Cart = (props) => {
   const STARTERS_LIST = [
@@ -50,20 +50,78 @@ const Cart = (props) => {
     },
   ];
 
+  const [isOrdered, setIsOrdered] = useState(false);
+
+  const isOrderedHandler = () => {
+    setIsOrdered(true);
+  };
+
   return (
     <Modal onCloseModal={props.onClose}>
-      <CartList data={STARTERS_LIST} title="Entrées" />
-      <CartList data={MAIN_LIST} title="Plats" />
-      <CartList data={DESSERT_LIST} title="Desserts" />
-      <div className={classes.total}>
-        <span>Total Amount</span>
-        <span>€0</span>
-      </div>
-      <div className={classes.actions}>
-        <button className={classes["button--alt"]} onClick={props.onClose}>
-          Close
-        </button>
-      </div>
+      {!isOrdered && (
+        <>
+          <CartList data={STARTERS_LIST} title="Entrées" />
+          <CartList data={MAIN_LIST} title="Plats" />
+          <CartList data={DESSERT_LIST} title="Desserts" />
+          <div className={classes.total}>
+            <span>Total Amount</span>
+            <span>€0</span>
+          </div>
+          <div className={classes.actions}>
+            <button className={classes["button--alt"]} onClick={props.onClose}>
+              Close
+            </button>
+            <button
+              className={classes["order-button"]}
+              onClick={isOrderedHandler}
+            >
+              Commander
+            </button>
+          </div>
+        </>
+      )}
+      {isOrdered && (
+        <>
+          <div className={classes["order-icon"]}>
+            <BsSendCheckFill className={classes.icon} />
+          </div>
+          <h3>Votre Commande</h3>
+          <ul>
+            <li>
+              <h4>Entrées:</h4>
+            </li>
+            <li>
+              <div className={classes["order-text"]}>
+                <span>Velouté de Légumes Gourmand</span>
+                <span>
+                  <b>Quantité: </b> x1
+                </span>
+              </div>
+            </li>
+          </ul>
+          <ul>
+            <li>
+              <h4>Plats:</h4>
+            </li>
+            <li>
+              <div className={classes["order-text"]}>
+                <span>Riz Pilaf aux Légumes Printaniers</span>
+                <span>
+                  <b>Quantité: </b> x1
+                </span>
+              </div>
+            </li>
+          </ul>
+          <span>
+            <b>Prix Total: </b> €14.3
+          </span>
+          <div className={classes.actions}>
+            <button className={classes["button--alt"]} onClick={props.onClose}>
+              Close
+            </button>
+          </div>
+        </>
+      )}
     </Modal>
   );
 };
