@@ -2,8 +2,8 @@ import React from "react";
 import classes from "./CartItem.module.css";
 
 const CartItem = (props) => {
-  console.log("CartItem props: ", props);
-  console.log(props.price);
+  // console.log("CartItem props: ", props);
+  // console.log(props.price);
   const price = `€${props.price.toFixed(2)}`;
 
   return (
