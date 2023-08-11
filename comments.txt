@@ -8,12 +8,16 @@ Ticket 5 - Integration of Footer component (Social Network ( FB/ insta / Trip Ad
 Ticket 6 - Integration of Modal (+ Backdrop) and Cart components via React Portal (using two states for handling the Cart component display)
 Ticket 7 - Update Modal Content with Order Confirmation when user validates its Order (manage state and add CSS animation) 
 Ticket 8 - Working with Ref and Forward Ref & Implementation of Cart Context and Cart Reducer to handle ADD Item To Cart and Show Number of Cart Items on HeaderCartButton.js using reduce() JS fn.
-Ticket 9 - Implementation of the logic to REMOVE item in the Cart component and management of display 
-Ticket 10 - Add CSS animation when order is added using the useEffect() hook in HeaderCartButton component
+Ticket 9 - Manage display of items added on Cart with filter() JS
+Ticket 10 - Manage:
+- use case when added items on Cart already exist in items array in the Context
+- total amount 
+Ticket 11 - Implementation of the logic to REMOVE item in the Cart component and management of display 
+Ticket 12 - Add CSS animation when order is added using the useEffect() hook in HeaderCartButton component
 
 [Additional Tickets]
-Ticket 11 - Footer:
+Ticket 13 - Footer:
 * creation and implementation of Contact Form Component
 * creation and implementation of Validation Modal when Contact Form is submitted
-Ticket 12 - Responsive and Improve CSS 
-Ticket 13 - Add bilingual feature (French/English) to the app
+Ticket 14 - Responsive and Improve CSS 
+Ticket 15 - Add bilingual feature (French/English) to the app

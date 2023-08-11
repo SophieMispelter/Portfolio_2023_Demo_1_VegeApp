@@ -12,6 +12,7 @@ const MealsCard = (props) => {
       name={meal.name}
       description={meal.description}
       price={meal.price}
+      type={meal.type}
     />
   ));
   return (

@@ -9,6 +9,7 @@ const STARTER_MEALS = [
     description:
       "Une soupe onctueuse à la courge butternut et aux carottes, relevée de notes chaudes de cannelle et de muscade.",
     price: 3.7,
+    type: "starter",
   },
   {
     id: 2,
@@ -16,6 +17,7 @@ const STARTER_MEALS = [
     description:
       "Des toasts croustillants garnis de tomates fraîches, d'olives kalamata, de basilic et d'une touche d'huile d'olive extra vierge",
     price: 4.2,
+    type: "starter",
   },
   {
     id: 3,
@@ -23,6 +25,7 @@ const STARTER_MEALS = [
     description:
       "Une purée d'aubergine fumée agrémentée d'ail, de citron, de piment et d'herbes, accompagnée de pain pita grillé.",
     price: 4.7,
+    type: "starter",
   },
   {
     id: 4,
@@ -30,6 +33,7 @@ const STARTER_MEALS = [
     description:
       "Des rouleaux frais remplis de légumes croquants tels que les concombres, les poivrons, les avocats et les herbes fraîches, servis avec une sauce aux arachides.",
     price: 3.6,
+    type: "starter",
   },
 ];
 
@@ -40,6 +44,7 @@ const MAIN_MEALS = [
     description:
       "Poêlée de champignons sauvages avec polenta crémeuse et persillade.",
     price: 7.5,
+    type: "main",
   },
   {
     id: 2,
@@ -47,6 +52,7 @@ const MAIN_MEALS = [
     description:
       "Un riz basmati parfumé cuit avec des légumes de saison tels que les petits pois, les asperges et les carottes, agrémenté d'herbes fraîches et de zestes de citron.",
     price: 5.9,
+    type: "main",
   },
   {
     id: 3,
@@ -54,12 +60,14 @@ const MAIN_MEALS = [
     description:
       "Galettes de lentilles aux légumes, accompagnées de purée de patates douces.",
     price: 6.1,
+    type: "main",
   },
   {
     id: 4,
     name: "Curry de Riz et Pois Cassés",
     description: "Curry de pois cassés et légumes servis avec du riz basmati.",
     price: 7.3,
+    type: "main",
   },
 ];
 
@@ -70,6 +78,7 @@ const DESSERT_MEALS = [
     description:
       "Des pommes cuites à la perfection, surmontées d'un mélange croustillant de noix concassées, d'avoine et de cassonade.",
     price: 3.8,
+    type: "dessert",
   },
   {
     id: 2,
@@ -77,6 +86,7 @@ const DESSERT_MEALS = [
     description:
       "Mousse au chocolat noir à base d'avocat, saupoudrée de noix concassées.",
     price: 4.5,
+    type: "dessert",
   },
   {
     id: 3,
@@ -84,6 +94,7 @@ const DESSERT_MEALS = [
     description:
       "De délicieuses tartelettes aux croûtes croustillantes, garnies de baies fraîches et nappées d'un coulis de fruits rouges.",
     price: 4.2,
+    type: "dessert",
   },
   {
     id: 4,
@@ -91,6 +102,7 @@ const DESSERT_MEALS = [
     description:
       "Des couches de yaourt végétalien alternées avec des morceaux juteux d'ananas, de mangue et de kiwi, saupoudrées de noix de coco râpée.",
     price: 4.1,
+    type: "dessert",
   },
 ];
 

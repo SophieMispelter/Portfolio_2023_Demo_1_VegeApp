@@ -12,7 +12,7 @@ const Backdrop = (props) => {
 const ModalOverlay = (props) => {
   // console.log("ModalOverlay props: ", props);
   return (
-    <div className={classes.modal}>
+    <div className={classes.modal} id="componentScrollToTop">
       <div className={classes.content}>{props.children}</div>
     </div>
   );
