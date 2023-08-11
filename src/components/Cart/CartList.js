@@ -20,6 +20,7 @@ const CartList = (props) => {
       </div>
       <div className={classes.line}></div>
       <ul>{cartItems}</ul>
+      {/* <ul className={classes["cart-items"]}>{cartItems}</ul> */}
     </div>
   );
 };

@@ -6,8 +6,13 @@
   overflow: auto;
 }
 
+.order-container {
+  /* border: 1px solid blue; */
+  overflow: auto;
+  max-height: 20rem;
+}
+
 .total {
-  /* border: orange 1px solid; */
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -19,6 +24,7 @@
 .total span {
   color: #363636;
 }
+
 .actions {
   text-align: right;
 }

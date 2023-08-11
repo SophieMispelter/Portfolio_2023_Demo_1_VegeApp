@@ -39,7 +39,7 @@ const STARTER_MEALS = [
 
 const MAIN_MEALS = [
   {
-    id: 1,
+    id: 5,
     name: "Festin Rustique",
     description:
       "Poêlée de champignons sauvages avec polenta crémeuse et persillade.",
@@ -47,7 +47,7 @@ const MAIN_MEALS = [
     type: "main",
   },
   {
-    id: 2,
+    id: 6,
     name: "Riz Pilaf aux Légumes Printaniers",
     description:
       "Un riz basmati parfumé cuit avec des légumes de saison tels que les petits pois, les asperges et les carottes, agrémenté d'herbes fraîches et de zestes de citron.",
@@ -55,7 +55,7 @@ const MAIN_MEALS = [
     type: "main",
   },
   {
-    id: 3,
+    id: 7,
     name: "Délices de la Terre",
     description:
       "Galettes de lentilles aux légumes, accompagnées de purée de patates douces.",
@@ -63,7 +63,7 @@ const MAIN_MEALS = [
     type: "main",
   },
   {
-    id: 4,
+    id: 8,
     name: "Curry de Riz et Pois Cassés",
     description: "Curry de pois cassés et légumes servis avec du riz basmati.",
     price: 7.3,
@@ -73,7 +73,7 @@ const MAIN_MEALS = [
 
 const DESSERT_MEALS = [
   {
-    id: 1,
+    id: 9,
     name: "Crumble aux Pommes et aux Noix",
     description:
       "Des pommes cuites à la perfection, surmontées d'un mélange croustillant de noix concassées, d'avoine et de cassonade.",
@@ -81,7 +81,7 @@ const DESSERT_MEALS = [
     type: "dessert",
   },
   {
-    id: 2,
+    id: 10,
     name: "Mousse au Chocolat Noir Veloutée",
     description:
       "Mousse au chocolat noir à base d'avocat, saupoudrée de noix concassées.",
@@ -89,7 +89,7 @@ const DESSERT_MEALS = [
     type: "dessert",
   },
   {
-    id: 3,
+    id: 11,
     name: "Tartelette aux Fruits Rouges",
     description:
       "De délicieuses tartelettes aux croûtes croustillantes, garnies de baies fraîches et nappées d'un coulis de fruits rouges.",
@@ -97,7 +97,7 @@ const DESSERT_MEALS = [
     type: "dessert",
   },
   {
-    id: 4,
+    id: 12,
     name: "Parfait au Yaourt et aux Fruits Tropicaux",
     description:
       "Des couches de yaourt végétalien alternées avec des morceaux juteux d'ananas, de mangue et de kiwi, saupoudrées de noix de coco râpée.",
