@@ -14,8 +14,6 @@ Ticket 10 - Manage:
 - total amount 
 Ticket 11 - Implementation of the logic to REMOVE item in the Cart component and management of display 
 Ticket 12 - Add CSS animation when order is added using the useEffect() hook in HeaderCartButton component
-
-[Additional Tickets]
 Ticket 13 - Footer:
 * creation and implementation of Contact Form Component
 * creation and implementation of Validation Modal when Contact Form is submitted
