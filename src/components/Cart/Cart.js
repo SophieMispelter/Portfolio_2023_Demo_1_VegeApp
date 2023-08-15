@@ -4,6 +4,7 @@ import Modal from "../UI/Modal";
 import CartList from "./CartList";
 import { BsSendCheckFill } from "react-icons/bs";
 import CartContext from "../store/cart-context";
+import CheckoutForm from "./CheckoutForm";
 
 const Cart = (props) => {
   const [isOrdered, setIsOrdered] = useState(false);
@@ -51,7 +52,7 @@ const Cart = (props) => {
             )}
           </div>
           <div className={classes.total}>
-            <span>Total Amount</span>
+            <span>Montant Total de votre Commande</span>
             <span>{totalAmount}</span>
           </div>
           <div className={classes.actions}>
@@ -69,7 +70,14 @@ const Cart = (props) => {
       )}
       {isOrdered && (
         <>
-          <div className={classes["order-icon"]}>
+          <div className={classes.total}>
+            <span>Montant Total de votre Commande</span>
+            <span>{totalAmount}</span>
+          </div>
+
+          <CheckoutForm />
+
+          {/* <div className={classes["order-icon"]}>
             <BsSendCheckFill className={classes.icon} />
           </div>
           <h3>Votre Commande</h3>
@@ -133,7 +141,7 @@ const Cart = (props) => {
             <button className={classes["button--alt"]} onClick={props.onClose}>
               Close
             </button>
-          </div>
+          </div> */}
         </>
       )}
     </Modal>
