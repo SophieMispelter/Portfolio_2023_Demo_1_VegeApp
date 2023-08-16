@@ -75,7 +75,7 @@ const Cart = (props) => {
             <span>{totalAmount}</span>
           </div>
 
-          <CheckoutForm />
+          <CheckoutForm onCloseCheckoutForm={props.onClose} />
 
           {/* <div className={classes["order-icon"]}>
             <BsSendCheckFill className={classes.icon} />

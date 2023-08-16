@@ -33,6 +33,7 @@ const MealItemForm = (props) => {
       <Input
         ref={amountInputRef}
         label="Amount"
+        classes={classes.input}
         input={{
           //   id: "amount",
           id: "amount_" + props.id,
