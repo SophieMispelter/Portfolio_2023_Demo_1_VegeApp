@@ -50,6 +50,7 @@ const AvailableMenu = () => {
           <span className={classes["loader-element"]}></span>
           <span className={classes["loader-element"]}></span>
         </div>
+        <div className={classes["loader-background"]}></div>
       </section>
     );
   }
@@ -69,9 +70,13 @@ const AvailableMenu = () => {
 
   return (
     <section className={classes.meals}>
-      <MealsCard ard data={filterStarter} title="Entrées" />
-      <MealsCard data={filterMain} title="Plats" />
-      <MealsCard data={filterDessert} title="Desserts" />
+      {!isLoading && (
+        <>
+          <MealsCard data={filterStarter} title="Entrées" />
+          <MealsCard data={filterMain} title="Plats" />
+          <MealsCard data={filterDessert} title="Desserts" />
+        </>
+      )}
     </section>
   );
 };

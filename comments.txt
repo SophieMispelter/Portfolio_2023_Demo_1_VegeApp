@@ -18,10 +18,14 @@ Ticket 13 - Move data to Firebase Backend, test GET URL on Postman, Fetch meals 
 Ticket 14 - Handling Loading State and Http errors
 Ticket 15 - PART ONE: Creation of the cart Checkout Form and set up of dynamic CSS styling for the Form Validation 
 Ticket 15 - PART TWO: Building a Custom Hook for the app's Forms with Reading Checkout Form values and adding Form Validation 
-Ticket 15 - PART THREE: Sending Http POST Request 
-Ticket 16 - Footer:
+Ticket 15 - PART THREE: Sending Http POST Request
+Ticket 16 - Addition of meals images on MealItem Cards: as we are not using Firebase yet to store the meals images, use of the JS Map.prototype.set -> The set() method of Map instances adds or updates an entry in this map with a specified key and a value.
+See detailed documentation: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map/set
+Ticket 17 - Responsive Design of VegeApp for Mobile and Tablet devices
+Ticket 18 - Add a Bilingual Feature (French/English) to the App
+Ticket 19 - Add a beverage section/component with improved CSS and CSS animation
+[Optional Ticket: Ticket 20 - Footer:]
 * creation and implementation of Contact Form Component using the custom hook
 * creation and implementation of Validation Modal when Contact Form is submitted
-Ticket 17 - Responsive
-Ticket 18 - Add a beverage section/component with improved CSS and CSS animation 
-Ticket 19 - Add a bilingual feature (French/English) to the app
+
+

@@ -32,7 +32,7 @@ const MealItemForm = (props) => {
     <form className={classes.form} onSubmit={submitHandler}>
       <Input
         ref={amountInputRef}
-        label="Amount"
+        label="Quantité"
         classes={classes.input}
         input={{
           //   id: "amount",

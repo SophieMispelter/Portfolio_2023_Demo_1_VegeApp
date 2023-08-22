@@ -57,10 +57,10 @@ const CheckoutForm = (props) => {
     cityIsValid &&
     phoneIsValid
   ) {
-    console.log("form is valid");
+    // console.log("form is valid");
     formIsValid = true;
   }
-  console.log(formIsValid);
+  // console.log(formIsValid);
 
   const submitHandler = (event) => {
     event.preventDefault();
