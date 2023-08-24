@@ -24,8 +24,6 @@ See detailed documentation: https://developer.mozilla.org/en-US/docs/Web/JavaScr
 Ticket 17 - Responsive Design of VegeApp for Mobile and Tablet devices
 Ticket 18 - Add a Bilingual Feature (French/English) to the App
 Ticket 19 - Add a beverage section/component with improved CSS and CSS animation
-[Optional Ticket: Ticket 20 - Footer:]
-* creation and implementation of Contact Form Component using the custom hook
-* creation and implementation of Validation Modal when Contact Form is submitted
+
 
 

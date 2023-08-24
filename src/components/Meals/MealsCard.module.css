@@ -1,14 +1,5 @@
-/* .card {
-  max-width: 30rem;
-  padding: 1rem;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
-  border-radius: 14px;
-  background-color: white;
-} */
-
 .card ul {
   list-style: none;
-  /* margin: 0; */
   padding: 0;
 }
 
@@ -25,5 +16,27 @@
   100% {
     transform: scaleX(1);
     opacity: 0.9;
+  }
+}
+
+@media only screen and (max-width: 576px) {
+  .card h3,
+  .line {
+    margin-left: 0.8rem;
+  }
+
+  .line {
+    margin-bottom: 0.5rem;
+  }
+}
+
+@media only screen and (min-width: 992px) and (max-width: 1200px) {
+  .card h3,
+  .line {
+    margin-left: 0.8rem;
+  }
+
+  .line {
+    margin-bottom: 0.5rem;
   }
 }

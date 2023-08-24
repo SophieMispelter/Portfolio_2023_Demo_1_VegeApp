@@ -35,7 +35,6 @@
   padding: 0.5rem 2rem;
   border-radius: 25px;
   margin-left: 1rem;
-  /* color: #363636; */
 }
 
 .actions .confirm-button {
@@ -66,4 +65,10 @@
 .invalid input {
   border-color: #aa0b20;
   background-color: #ffeff1;
+}
+
+@media screen and (max-width: 992px) and (orientation: landscape) {
+  .form {
+    max-height: 150px;
+  }
 }

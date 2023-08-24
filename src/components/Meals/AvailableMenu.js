@@ -74,7 +74,11 @@ const AvailableMenu = () => {
         <>
           <MealsCard data={filterStarter} title="Entrées" />
           <MealsCard data={filterMain} title="Plats" />
-          <MealsCard data={filterDessert} title="Desserts" />
+          <MealsCard
+            className={classes.dessert}
+            data={filterDessert}
+            title="Desserts"
+          />
         </>
       )}
     </section>

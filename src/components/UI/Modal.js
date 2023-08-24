@@ -13,7 +13,7 @@ const ModalOverlay = (props) => {
   // console.log("ModalOverlay props: ", props);
   return (
     <div className={classes.modal} id="componentScrollToTop">
-      <div className={classes.content}>{props.children}</div>
+      <div>{props.data}</div>
     </div>
   );
 };
@@ -30,7 +30,8 @@ const Modal = (props) => {
         portalElement
       )}
       {ReactDOM.createPortal(
-        <ModalOverlay> {props.children} </ModalOverlay>,
+        // <ModalOverlay> {props.children} </ModalOverlay>,
+        <ModalOverlay data={props.children} />,
         portalElement
       )}
     </Fragment>

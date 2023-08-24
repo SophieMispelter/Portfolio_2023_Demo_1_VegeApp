@@ -13,13 +13,14 @@ const MealsCard = (props) => {
       description={meal.description}
       price={meal.price}
       type={meal.type}
+      className={""}
     />
   ));
   return (
     <div className={classes.card}>
       <h3> {props.title} </h3>
       <div className={classes.line}></div>
-      <ul>{mealsList}</ul>
+      <ul className={props.className}>{mealsList}</ul>
 
       {/* {props.data.map((meal) => (
         <MealItem

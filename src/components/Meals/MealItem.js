@@ -9,8 +9,8 @@ const MealItem = (props) => {
 
   const price = `€${props.price.toFixed(2)}`;
 
-  console.log("map: ", map);
-  console.log(map.get(props.id));
+  // console.log("map: ", map);
+  // console.log(map.get(props.id));
   const imgObj = map.get(props.id);
   // console.log("imgObj: ", imgObj);
   // console.log("imgObj.img: ", imgObj.img);
@@ -47,7 +47,7 @@ const MealItem = (props) => {
         </div> */}
 
         {imgObj && (
-          <a href={imgObj.credit} target="_blank">
+          <a className={classes.mealImg} href={imgObj.credit} target="_blank">
             <img src={imgObj.img} alt={imgObj.alt} />
           </a>
         )}
