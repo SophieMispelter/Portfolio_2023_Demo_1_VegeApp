@@ -5,9 +5,12 @@ import CartList from "./CartList";
 import { BsSendCheckFill } from "react-icons/bs";
 import CartContext from "../store/cart-context";
 import CheckoutForm from "./CheckoutForm";
+import { ORDERS_URL } from "../../firebase/constants";
 
 const Cart = (props) => {
   const [isOrdered, setIsOrdered] = useState(false);
+  const [didSubmitOrder, setDidSubmitOrder] = useState(false);
+  const [orderTotalAmount, setOrderTotalAmount] = useState(0);
 
   useEffect(() => {
     // console.log("in useEffect");
@@ -15,7 +18,6 @@ const Cart = (props) => {
 
     if (isOrdered) {
       const IconDivToScroll = document.getElementById("componentScrollToTop");
-      // console.log(IconDivToScroll);
 
       IconDivToScroll.scroll(0, 0);
     }
@@ -32,13 +34,25 @@ const Cart = (props) => {
   const totalAmount = `€${cartCtx.totalAmount.toFixed(2)}`;
 
   const filterStarter = itemsArr.filter((item) => item.type === "starter");
-  // console.log("filterStarter: ", filterStarter);
   const filterMain = itemsArr.filter((item) => item.type === "main");
   const filterDessert = itemsArr.filter((item) => item.type === "dessert");
 
+  const submitOrderHandler = async () => {
+    await fetch(ORDERS_URL, {
+      method: "POST",
+      body: JSON.stringify({
+        orderedItems: cartCtx.items,
+      }),
+    });
+    setIsOrdered(false);
+    setDidSubmitOrder(true);
+    setOrderTotalAmount(cartCtx.totalAmount);
+    cartCtx.clearCart();
+  };
+
   return (
     <Modal onCloseModal={props.onClose}>
-      {!isOrdered && (
+      {!isOrdered && !didSubmitOrder && (
         <>
           <div className={classes["order-container"]}>
             {filterStarter.length > 0 && (
@@ -57,7 +71,7 @@ const Cart = (props) => {
           </div>
           <div className={classes.actions}>
             <button className={classes["button--alt"]} onClick={props.onClose}>
-              Close
+              Fermer
             </button>
             <button
               className={classes["order-button"]}
@@ -75,12 +89,19 @@ const Cart = (props) => {
             <span>{totalAmount}</span>
           </div>
 
-          <CheckoutForm onCloseCheckoutForm={props.onClose} />
-
-          {/* <div className={classes["order-icon"]}>
+          <CheckoutForm
+            onCloseCheckoutForm={props.onClose}
+            onConfirm={submitOrderHandler}
+          />
+        </>
+      )}
+      {didSubmitOrder && (
+        <>
+          <div className={classes["order-icon"]}>
             <BsSendCheckFill className={classes.icon} />
           </div>
-          <h3>Votre Commande</h3>
+          <h3>Merci pour votre commande.</h3>
+          <h4>Celle-ci vous sera livrée dans 15 minutes.</h4>
           <div className={classes["order-container"]}>
             {filterStarter.length > 0 && (
               <ul>
@@ -135,13 +156,13 @@ const Cart = (props) => {
             )}
           </div>
           <span>
-            <b>Prix Total: </b> {totalAmount}
+            <b>Prix Total: </b> {`€${orderTotalAmount.toFixed(2)}`}
           </span>
           <div className={classes.actions}>
             <button className={classes["button--alt"]} onClick={props.onClose}>
-              Close
+              Fermer
             </button>
-          </div> */}
+          </div>
         </>
       )}
     </Modal>

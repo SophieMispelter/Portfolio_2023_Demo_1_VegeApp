@@ -18,7 +18,7 @@ Ticket 13 - Move data to Firebase Backend, test GET URL on Postman, Fetch meals 
 Ticket 14 - Handling Loading State and Http errors
 Ticket 15 - PART ONE: Creation of the cart Checkout Form and set up of dynamic CSS styling for the Form Validation 
 Ticket 15 - PART TWO: Building a Custom Hook for the app's Forms with Reading Checkout Form values and adding Form Validation 
-Ticket 15 - PART THREE: Sending Http POST Request
+Ticket 15 - PART THREE: Sending Http POST Request 
 Ticket 16 - Footer:
 * creation and implementation of Contact Form Component using the custom hook
 * creation and implementation of Validation Modal when Contact Form is submitted

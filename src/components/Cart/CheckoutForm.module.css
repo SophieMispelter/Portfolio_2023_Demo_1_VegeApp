@@ -45,6 +45,13 @@
   color: white;
 }
 
+.actions .confirm-button:disabled {
+  background-color: lightgrey;
+  color: rgba(16, 16, 16, 0.489);
+  border-color: rgba(118, 118, 118, 0.3);
+  cursor: not-allowed;
+}
+
 .actions button:hover,
 .actions button:active {
   background-color: #5a1a01;

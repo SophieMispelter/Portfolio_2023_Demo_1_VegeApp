@@ -38,7 +38,7 @@ const useInput = (validateValue) => {
     inputStateReducer,
     initialInputState
   );
-  console.log("inputState: ", inputState);
+  // console.log("inputState: ", inputState);
 
   const valueIsValid = validateValue(inputState.value);
   const hasError = !valueIsValid && inputState.isBlur;

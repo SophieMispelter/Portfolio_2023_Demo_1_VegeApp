@@ -1,9 +1,8 @@
-import React, { useContext } from "react";
+import React from "react";
 import classes from "./CheckoutForm.module.css";
 import Input from "../UI/Input";
 import useInput from "../hooks/use-input";
 
-// const hasError = false;
 const isTextValid = (value) => value.trim() !== "";
 const regex = new RegExp("^[0-9]+$");
 const isNumberValid = (value) => regex.test(value);
@@ -58,8 +57,10 @@ const CheckoutForm = (props) => {
     cityIsValid &&
     phoneIsValid
   ) {
+    console.log("form is valid");
     formIsValid = true;
   }
+  console.log(formIsValid);
 
   const submitHandler = (event) => {
     event.preventDefault();
@@ -78,6 +79,8 @@ const CheckoutForm = (props) => {
     }
 
     console.log("form submitted");
+    // Security reason: for the HTTP POST, none of the user's data are going to be sent but only their ordered items.
+    props.onConfirm();
 
     resetName();
     resetAddress();
@@ -107,7 +110,7 @@ const CheckoutForm = (props) => {
     <form className={classes.form} onSubmit={submitHandler}>
       <h4>Informations à renseigner pour la livraison:</h4>
       <Input
-        label="name"
+        label="Nom"
         classes={nameControlClasses}
         input={{
           type: "text",
@@ -121,7 +124,7 @@ const CheckoutForm = (props) => {
         <p className="error-text">Merci d'entrer un nom valide.</p>
       )}
       <Input
-        label="address"
+        label="Adresse"
         classes={addressControlClasses}
         input={{
           type: "text",
@@ -135,7 +138,7 @@ const CheckoutForm = (props) => {
         <p className="error-text">Merci d'entrer une adresse valide.</p>
       )}
       <Input
-        label="postal"
+        label="Code Postal"
         classes={postalCodeControlClasses}
         input={{
           type: "text",
@@ -149,7 +152,7 @@ const CheckoutForm = (props) => {
         <p className="error-text">Merci d'entrer un code postal valide.</p>
       )}
       <Input
-        label="city"
+        label="Ville"
         classes={cityControlClasses}
         input={{
           type: "text",
@@ -163,7 +166,7 @@ const CheckoutForm = (props) => {
         <p className="error-text">Merci d'entrer une ville valide.</p>
       )}
       <Input
-        label="phone"
+        label="Téléphone"
         classes={phoneControlClasses}
         input={{
           type: "text",
@@ -181,9 +184,15 @@ const CheckoutForm = (props) => {
 
       <div className={classes.actions}>
         <button type="button" onClick={props.onCloseCheckoutForm}>
-          Cancel
+          Annuler
         </button>
-        <button className={classes["confirm-button"]}>Confirm</button>
+        <button
+          type="submit"
+          className={classes["confirm-button"]}
+          disabled={!formIsValid}
+        >
+          Payer
+        </button>
       </div>
     </form>
   );
