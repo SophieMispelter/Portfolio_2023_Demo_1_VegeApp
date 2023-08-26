@@ -1,8 +1,10 @@
 import React, { useRef, useState } from "react";
 import Input from "../UI/Input";
 import classes from "./MealItemForm.module.css";
+import { useTranslation } from "react-i18next";
 
 const MealItemForm = (props) => {
+  const { t } = useTranslation();
   const [amountIsValid, setAmountIsValid] = useState(true);
 
   const amountInputRef = useRef();
@@ -32,7 +34,7 @@ const MealItemForm = (props) => {
     <form className={classes.form} onSubmit={submitHandler}>
       <Input
         ref={amountInputRef}
-        label="Quantité"
+        label={t("input.quantityLabel")}
         classes={classes.input}
         input={{
           //   id: "amount",
@@ -45,7 +47,7 @@ const MealItemForm = (props) => {
         }}
       />
       <button>+</button>
-      {!amountIsValid && <p>Veuillez entrer une quantité valide (1-5)</p>}
+      {!amountIsValid && <p> {t("mealItemForm.amountError")} </p>}
     </form>
   );
 };

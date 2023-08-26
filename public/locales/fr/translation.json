@@ -1,0 +1,44 @@
+{
+  "header": {
+    "cart": "Votre Panier",
+    "summaryTitle": "VegeApp: Livraison Rapide de Repas Végétariens Savoureux",
+    "summaryDescription": "Découvrez notre appli de livraison de repas végétariens. Commandez des plats équilibrés et préparés avec des ingrédients de saison. Faites-vous livrer rapidement où que vous soyez."
+  },
+  "modal": {
+    "amountOrder": "Montant Total de votre Commande: ",
+    "btnClose": "Fermer",
+    "btnOrder": "Commander",
+    "didOrder": "Merci pour votre commande.",
+    "deliveryTime": "Celle-ci vous sera livrée dans 15 minutes.",
+    "starters": "Entrées",
+    "main": "Plats",
+    "dessert": "Desserts",
+    "quantity": "Quantité: ",
+    "totalAmount": "Prix Total: "
+  },
+  "checkoutForm": {
+    "info": "Informations à renseigner pour la livraison: ",
+    "nameError": "Merci d'entrer un nom valide.",
+    "addressError": "Merci d'entrer une adresse valide.",
+    "postalError": "Merci d'entrer un code postal valide.",
+    "cityError": "Merci d'entrer une ville valide.",
+    "phoneError": "Merci d'entrer un numéro de téléphone valide.",
+    "btnCancel": "Annuler",
+    "btnPay": "Payer"
+  },
+  "mealItemForm": {
+    "amountError": "Veuillez entrer une quantité valide (1-5)"
+  },
+  "input": {
+    "nameLabel": "Nom",
+    "addressLabel": "Adresse",
+    "postalLabel": "Code Postal",
+    "cityLabel": "Ville",
+    "phoneLabel": "Téléphone",
+    "quantityLabel": "Quantité"
+  },
+  "footer": {
+    "contact": "Contact",
+    "legal": "Mentions Légales"
+  }
+}

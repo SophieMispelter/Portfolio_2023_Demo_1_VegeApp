@@ -2,12 +2,14 @@ import React from "react";
 import classes from "./CheckoutForm.module.css";
 import Input from "../UI/Input";
 import useInput from "../hooks/use-input";
+import { useTranslation } from "react-i18next";
 
 const isTextValid = (value) => value.trim() !== "";
 const regex = new RegExp("^[0-9]+$");
 const isNumberValid = (value) => regex.test(value);
 
 const CheckoutForm = (props) => {
+  const { t } = useTranslation();
   const {
     value: nameValue,
     hasError: nameHasError,
@@ -108,9 +110,9 @@ const CheckoutForm = (props) => {
 
   return (
     <form className={classes.form} onSubmit={submitHandler}>
-      <h4>Informations à renseigner pour la livraison:</h4>
+      <h4>{t("checkoutForm.info")} </h4>
       <Input
-        label="Nom"
+        label={t("input.nameLabel")}
         classes={nameControlClasses}
         input={{
           type: "text",
@@ -121,10 +123,10 @@ const CheckoutForm = (props) => {
         }}
       />
       {nameHasError && (
-        <p className="error-text">Merci d'entrer un nom valide.</p>
+        <p className="error-text">{t("checkoutForm.nameError")}</p>
       )}
       <Input
-        label="Adresse"
+        label={t("input.addressLabel")}
         classes={addressControlClasses}
         input={{
           type: "text",
@@ -135,10 +137,10 @@ const CheckoutForm = (props) => {
         }}
       />
       {addressHasError && (
-        <p className="error-text">Merci d'entrer une adresse valide.</p>
+        <p className="error-text">{t("checkoutForm.addressError")}</p>
       )}
       <Input
-        label="Code Postal"
+        label={t("input.postalLabel")}
         classes={postalCodeControlClasses}
         input={{
           type: "text",
@@ -149,10 +151,10 @@ const CheckoutForm = (props) => {
         }}
       />
       {postalCodeHasError && (
-        <p className="error-text">Merci d'entrer un code postal valide.</p>
+        <p className="error-text">{t("checkoutForm.postalError")}</p>
       )}
       <Input
-        label="Ville"
+        label={t("input.cityLabel")}
         classes={cityControlClasses}
         input={{
           type: "text",
@@ -163,10 +165,10 @@ const CheckoutForm = (props) => {
         }}
       />
       {cityHasError && (
-        <p className="error-text">Merci d'entrer une ville valide.</p>
+        <p className="error-text">{t("checkoutForm.cityError")}</p>
       )}
       <Input
-        label="Téléphone"
+        label={t("input.phoneLabel")}
         classes={phoneControlClasses}
         input={{
           type: "text",
@@ -177,21 +179,19 @@ const CheckoutForm = (props) => {
         }}
       />
       {phoneHasError && (
-        <p className="error-text">
-          Merci d'entrer un numéro de téléphone valide.
-        </p>
+        <p className="error-text">{t("checkoutForm.phoneError")}</p>
       )}
 
       <div className={classes.actions}>
         <button type="button" onClick={props.onCloseCheckoutForm}>
-          Annuler
+          {t("checkoutForm.btnCancel")}
         </button>
         <button
           type="submit"
           className={classes["confirm-button"]}
           disabled={!formIsValid}
         >
-          Payer
+          {t("checkoutForm.btnPay")}
         </button>
       </div>
     </form>

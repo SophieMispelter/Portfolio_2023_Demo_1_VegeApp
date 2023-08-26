@@ -1,0 +1,44 @@
+{
+  "header": {
+    "cart": "Your Cart",
+    "summaryTitle": "VegeApp: Fast Delivery of Tasty Vegetarian Meals",
+    "summaryDescription": "Discover our vegetarian meal delivery app. Order balanced dishes prepared with seasonal ingredients. Get delivered quickly wherever you are."
+  },
+  "modal": {
+    "amountOrder": "Total Amount of your Order: ",
+    "btnClose": "Close",
+    "btnOrder": "Order",
+    "didOrder": "Thank you for your order.",
+    "deliveryTime": "It will be delivered to you in 15 minutes.",
+    "starters": "Starters",
+    "main": "Mains",
+    "dessert": "Desserts",
+    "quantity": "Quantity: ",
+    "totalAmount": "Total Amount: "
+  },
+  "checkoutForm": {
+    "info": "Information to be provided for delivery: ",
+    "nameError": "Please enter a valid name.",
+    "addressError": "Please enter a valid address.",
+    "postalError": "Please enter a valid postal code.",
+    "cityError": "Please enter a valid city.",
+    "phoneError": "Please enter a valid phone number.",
+    "btnCancel": "Cancel",
+    "btnPay": "Pay"
+  },
+  "mealItemForm": {
+    "amountError": "Please enter a valid quantity (1-5)."
+  },
+  "input": {
+    "nameLabel": "Name",
+    "addressLabel": "Address",
+    "postalLabel": "Postal Code",
+    "cityLabel": "City",
+    "phoneLabel": "Phone Number",
+    "quantityLabel": "Quantity"
+  },
+  "footer": {
+    "contact": "Contact",
+    "legal": "Legal Notice"
+  }
+}

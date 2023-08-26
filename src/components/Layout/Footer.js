@@ -4,8 +4,11 @@ import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import FacebookIcon from "@mui/icons-material/Facebook";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import TripAdvisorIcon from "../../assets/tripadvisor-32.png";
+import { useTranslation } from "react-i18next";
 
 const Footer = () => {
+  const { t } = useTranslation();
+
   return (
     <footer className={classes.footer}>
       <ul>
@@ -47,11 +50,11 @@ const Footer = () => {
             href="mailto:&#97;&#115;&#109;&#105;s&#112;e%6c&#116;&#101;%72&#64;ya%68o%6f%2ef&#114;"
             target="_blank"
           >
-            Contact
+            {t("footer.contact")}
           </a>
         </li>
         <li>
-          <a href="#">Mentions Légales</a>
+          <a href="#">{t("footer.legal")}</a>
         </li>
       </ul>
     </footer>

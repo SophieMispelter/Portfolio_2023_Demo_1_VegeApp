@@ -6,8 +6,10 @@ import { BsSendCheckFill } from "react-icons/bs";
 import CartContext from "../store/cart-context";
 import CheckoutForm from "./CheckoutForm";
 import { ORDERS_URL } from "../../firebase/constants";
+import { useTranslation } from "react-i18next";
 
 const Cart = (props) => {
+  const { t } = useTranslation();
   const [isOrdered, setIsOrdered] = useState(false);
   const [didSubmitOrder, setDidSubmitOrder] = useState(false);
   const [orderTotalAmount, setOrderTotalAmount] = useState(0);
@@ -56,28 +58,28 @@ const Cart = (props) => {
         <>
           <div className={classes["order-container"]}>
             {filterStarter.length > 0 && (
-              <CartList data={filterStarter} title="Entrées" />
+              <CartList data={filterStarter} title={t("modal.starters")} />
             )}
             {filterMain.length > 0 && (
-              <CartList data={filterMain} title="Plats" />
+              <CartList data={filterMain} title={t("modal.main")} />
             )}
             {filterDessert.length > 0 && (
-              <CartList data={filterDessert} title="Desserts" />
+              <CartList data={filterDessert} title={t("modal.dessert")} />
             )}
           </div>
           <div className={classes.total}>
-            <span>Montant Total de votre Commande</span>
+            <span> {t("modal.amountOrder")} </span>
             <span>{totalAmount}</span>
           </div>
           <div className={classes.actions}>
             <button className={classes["button--alt"]} onClick={props.onClose}>
-              Fermer
+              {t("modal.btnClose")}
             </button>
             <button
               className={classes["order-button"]}
               onClick={isOrderedHandler}
             >
-              Commander
+              {t("modal.btnOrder")}
             </button>
           </div>
         </>
@@ -85,7 +87,7 @@ const Cart = (props) => {
       {isOrdered && (
         <>
           <div className={classes.total}>
-            <span>Montant Total de votre Commande</span>
+            <span>{t("modal.amountOrder")}</span>
             <span>{totalAmount}</span>
           </div>
 
@@ -100,20 +102,20 @@ const Cart = (props) => {
           <div className={classes["order-icon"]}>
             <BsSendCheckFill className={classes.icon} />
           </div>
-          <h3>Merci pour votre commande.</h3>
-          <h4>Celle-ci vous sera livrée dans 15 minutes.</h4>
+          <h3>{t("modal.didOrder")}</h3>
+          <h4>{t("modal.deliveryTime")}</h4>
           <div className={classes["order-container"]}>
             {filterStarter.length > 0 && (
               <ul>
                 <li>
-                  <h4>Entrées:</h4>
+                  <h4>{t("modal.starters")}</h4>
                 </li>
                 {filterStarter.map((starter) => (
                   <li key={starter.id}>
                     <div className={classes["order-text"]}>
                       <span> {starter.name} </span>
                       <span>
-                        <b>Quantité: </b> {starter.amount}
+                        <b>{t("modal.quantity")}</b> {starter.amount}
                       </span>
                     </div>
                   </li>
@@ -123,14 +125,14 @@ const Cart = (props) => {
             {filterMain.length > 0 && (
               <ul>
                 <li>
-                  <h4>Plats:</h4>
+                  <h4>{t("modal.main")}</h4>
                 </li>
                 {filterMain.map((main) => (
                   <li key={main.id}>
                     <div className={classes["order-text"]}>
                       <span> {main.name} </span>
                       <span>
-                        <b>Quantité: </b> {main.amount}
+                        <b>{t("modal.quantity")}</b> {main.amount}
                       </span>
                     </div>
                   </li>
@@ -140,14 +142,14 @@ const Cart = (props) => {
             {filterDessert.length > 0 && (
               <ul>
                 <li>
-                  <h4>Desserts:</h4>
+                  <h4>{t("modal.dessert")}</h4>
                 </li>
                 {filterDessert.map((dessert) => (
                   <li key={dessert.id}>
                     <div className={classes["order-text"]}>
                       <span> {dessert.name} </span>
                       <span>
-                        <b>Quantité: </b> {dessert.amount}
+                        <b>{t("modal.quantity")}</b> {dessert.amount}
                       </span>
                     </div>
                   </li>
@@ -156,11 +158,11 @@ const Cart = (props) => {
             )}
           </div>
           <span>
-            <b>Prix Total: </b> {`€${orderTotalAmount.toFixed(2)}`}
+            <b>{t("modal.totalAmount")}</b> {`€${orderTotalAmount.toFixed(2)}`}
           </span>
           <div className={classes.actions}>
             <button className={classes["button--alt"]} onClick={props.onClose}>
-              Fermer
+              {t("modal.btnClose")}
             </button>
           </div>
         </>

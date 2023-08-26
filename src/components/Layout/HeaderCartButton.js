@@ -2,8 +2,10 @@ import { useContext, useEffect, useState } from "react";
 import classes from "./HeaderCartButton.module.css";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 import CartContext from "../store/cart-context";
+import { useTranslation } from "react-i18next";
 
 const HeaderCartButton = (props) => {
+  const { t } = useTranslation();
   const cartCtx = useContext(CartContext);
   const { items } = cartCtx;
   const [isBtnBump, setIsBtnBump] = useState(false);
@@ -36,7 +38,7 @@ const HeaderCartButton = (props) => {
       <span>
         <ShoppingCartIcon />
       </span>
-      <span>Votre Panier</span>
+      <span> {t("header.cart")} </span>
       <span className={classes.badge}>{nbOfCartItems}</span>
     </button>
   );

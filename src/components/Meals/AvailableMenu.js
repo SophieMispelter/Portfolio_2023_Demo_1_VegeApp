@@ -2,8 +2,10 @@ import React, { useEffect, useState } from "react";
 import classes from "./AvailableMenu.module.css";
 import MealsCard from "./MealsCard";
 import { MEALS_URL } from "../../firebase/constants";
+import { useTranslation } from "react-i18next";
 
 const AvailableMenu = () => {
+  const { t } = useTranslation();
   const [meals, setMeals] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
   const [httpError, setHttpError] = useState(null);
@@ -72,12 +74,12 @@ const AvailableMenu = () => {
     <section className={classes.meals}>
       {!isLoading && (
         <>
-          <MealsCard data={filterStarter} title="Entrées" />
-          <MealsCard data={filterMain} title="Plats" />
+          <MealsCard data={filterStarter} title={t("modal.starters")} />
+          <MealsCard data={filterMain} title={t("modal.main")} />
           <MealsCard
             className={classes.dessert}
             data={filterDessert}
-            title="Desserts"
+            title={t("modal.dessert")}
           />
         </>
       )}

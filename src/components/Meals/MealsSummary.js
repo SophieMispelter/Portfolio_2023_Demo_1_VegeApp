@@ -1,16 +1,14 @@
 import React from "react";
 import classes from "./MealsSummary.module.css";
+import { useTranslation } from "react-i18next";
 
 const MealsSummary = () => {
+  const { t } = useTranslation();
+
   return (
     <section className={classes.summary}>
-      <h2>VegeApp: Livraison Rapide de Repas Végétariens Savoureux</h2>
-      <p>Découvrez notre appli de livraison de repas végétariens.</p>
-      <p>
-        Commandez des plats équilibrés et préparés avec des ingrédients de
-        saison.
-      </p>
-      <p>Faites-vous livrer rapidement où que vous soyez.</p>
+      <h2>{t("header.summaryTitle")} </h2>
+      <p> {t("header.summaryDescription")} </p>
     </section>
   );
 };
