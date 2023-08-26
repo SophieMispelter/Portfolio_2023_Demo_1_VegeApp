@@ -1,128 +1,44 @@
 import React, { useEffect, useState } from "react";
 import classes from "./AvailableMenu.module.css";
 import MealsCard from "./MealsCard";
-import { MEALS_URL } from "../../firebase/constants";
-
-// Before Firebase:
-// const STARTER_MEALS = [
-//   {
-//     id: 1,
-//     name: "Velouté de Légumes Gourmand",
-//     description:
-//       "Une soupe onctueuse à la courge butternut et aux carottes, relevée de notes chaudes de cannelle et de muscade.",
-//     price: 3.7,
-//     type: "starter",
-//   },
-//   {
-//     id: 2,
-//     name: "Bruschettas Méditerranéennes",
-//     description:
-//       "Des toasts croustillants garnis de tomates fraîches, d'olives kalamata, de basilic et d'une touche d'huile d'olive extra vierge",
-//     price: 4.2,
-//     type: "starter",
-//   },
-//   {
-//     id: 3,
-//     name: "Caviar d'Aubergine Épicé",
-//     description:
-//       "Une purée d'aubergine fumée agrémentée d'ail, de citron, de piment et d'herbes, accompagnée de pain pita grillé.",
-//     price: 4.7,
-//     type: "starter",
-//   },
-//   {
-//     id: 4,
-//     name: "Rouleaux de Printemps Croquants",
-//     description:
-//       "Des rouleaux frais remplis de légumes croquants tels que les concombres, les poivrons, les avocats et les herbes fraîches, servis avec une sauce aux arachides.",
-//     price: 3.6,
-//     type: "starter",
-//   },
-// ];
-
-// const MAIN_MEALS = [
-//   {
-//     id: 5,
-//     name: "Festin Rustique",
-//     description:
-//       "Poêlée de champignons sauvages avec polenta crémeuse et persillade.",
-//     price: 7.5,
-//     type: "main",
-//   },
-//   {
-//     id: 6,
-//     name: "Riz Pilaf aux Légumes Printaniers",
-//     description:
-//       "Un riz basmati parfumé cuit avec des légumes de saison tels que les petits pois, les asperges et les carottes, agrémenté d'herbes fraîches et de zestes de citron.",
-//     price: 5.9,
-//     type: "main",
-//   },
-//   {
-//     id: 7,
-//     name: "Délices de la Terre",
-//     description:
-//       "Galettes de lentilles aux légumes, accompagnées de purée de patates douces.",
-//     price: 6.1,
-//     type: "main",
-//   },
-//   {
-//     id: 8,
-//     name: "Curry de Riz et Pois Cassés",
-//     description: "Curry de pois cassés et légumes servis avec du riz basmati.",
-//     price: 7.3,
-//     type: "main",
-//   },
-// ];
-
-// const DESSERT_MEALS = [
-//   {
-//     id: 9,
-//     name: "Crumble aux Pommes et aux Noix",
-//     description:
-//       "Des pommes cuites à la perfection, surmontées d'un mélange croustillant de noix concassées, d'avoine et de cassonade.",
-//     price: 3.8,
-//     type: "dessert",
-//   },
-//   {
-//     id: 10,
-//     name: "Mousse au Chocolat Noir Veloutée",
-//     description:
-//       "Mousse au chocolat noir à base d'avocat, saupoudrée de noix concassées.",
-//     price: 4.5,
-//     type: "dessert",
-//   },
-//   {
-//     id: 11,
-//     name: "Tartelette aux Fruits Rouges",
-//     description:
-//       "De délicieuses tartelettes aux croûtes croustillantes, garnies de baies fraîches et nappées d'un coulis de fruits rouges.",
-//     price: 4.2,
-//     type: "dessert",
-//   },
-//   {
-//     id: 12,
-//     name: "Parfait au Yaourt et aux Fruits Tropicaux",
-//     description:
-//       "Des couches de yaourt végétalien alternées avec des morceaux juteux d'ananas, de mangue et de kiwi, saupoudrées de noix de coco râpée.",
-//     price: 4.1,
-//     type: "dessert",
-//   },
-// ];
+import {
+  /*ERROR_1_MEALS_URL, ERROR_2_MEALS_URL,*/ MEALS_URL,
+} from "../../firebase/constants";
 
 const AvailableMenu = () => {
   const [meals, setMeals] = useState([]);
+  const [isLoading, setIsLoading] = useState(false);
+  const [httpError, setHttpError] = useState(null);
 
   useEffect(() => {
-    // declaration of async meals fn
+    // declaration of async fetchMeals fn
     const fetchMeals = async () => {
+      setIsLoading(true);
+
       // fetch data/response from the Firebase api
-      const response = await fetch(MEALS_URL);
+      const response = await fetch(
+        // Correct URL
+        MEALS_URL
+
+        // Handling (intentional) Errors:
+        // 1 -  where the response object exists, here !response.ok is true we throw an error instead of a promise, hence, that error will cause that promise to reject. => Something went wrong!
+        // ERROR_1_MEALS_URL
+        // 2 - where the response object doesn't exists, hence, the promise will be rejected, we will never get into the if statement => Failed to fetch:
+        // ERROR_2_MEALS_URL
+      );
+
+      // console.log("response: ", response);
+      if (!response.ok) {
+        // console.log("error");
+        throw new Error("Oops! Veuillez réessayer.");
+      }
 
       // convert response to json
       const responseData = await response.json();
       // fetchMeals();
       // console.log("responseData: ", responseData);
 
-      // turning responseData obj into array to apply map() for displaying results
+      // turning responseData obj into array to apply map() in MealsCard.js for displaying results
       const mealsArray = [];
       for (const key in responseData) {
         // key = object's properties
@@ -135,13 +51,43 @@ const AvailableMenu = () => {
         });
       }
 
-      // set state with the result
+      // set state with result
       setMeals(mealsArray);
       // console.log("mealsArray: ", mealsArray);
+      setIsLoading(false);
     };
 
-    fetchMeals();
+    fetchMeals().catch((error) => {
+      // console.log("error catched!");
+      // console.log("error: ", error);
+      setIsLoading(false);
+      setHttpError(error.message);
+      // console.log("error.message: ", error.message);
+    });
   }, []);
+
+  if (isLoading) {
+    return (
+      <section className={classes.mealsLoading}>
+        <div className={classes.loader}>
+          <p>En chargement</p>
+          <span className={classes["loader-element"]}></span>
+          <span className={classes["loader-element"]}></span>
+          <span className={classes["loader-element"]}></span>
+        </div>
+      </section>
+    );
+  }
+
+  if (httpError) {
+    return (
+      <section className={classes.mealsError}>
+        <p>Une erreur vient de se produire...</p>
+        <p>Veuillez réessayer.</p>
+        {/* <p>{httpError}</p> */}
+      </section>
+    );
+  }
 
   const filterStarter = meals.filter((item) => item.type === "starter");
   const filterMain = meals.filter((item) => item.type === "main");

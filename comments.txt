@@ -15,8 +15,14 @@ Ticket 10 - Manage:
 Ticket 11 - Implementation of the logic to REMOVE item in the Cart component and management of display 
 Ticket 12 - Add CSS animation when order is added using the useEffect() hook in HeaderCartButton component
 Ticket 13 - Move data to Firebase Backend, test GET URL on Postman, Fetch meals list via HTTP Request using fetch() API. Use js filter() to display meals by category (starter/main/dessert).
-Ticket 14 - Footer:
-* creation and implementation of Contact Form Component
+Ticket 14 - Handling Loading State and Http errors
+Ticket 15 - Building a Custom Hook for the app's Forms
+Ticket 16 - Creation of the order Checkout Form using the Custom Hook
+Ticket 17 - Reading Checkout Form values and adding Form Validation
+Ticket 18 - Sending Http POST Request
+Ticket 19 - Footer:
+* creation and implementation of Contact Form Component using the custom hook
 * creation and implementation of Validation Modal when Contact Form is submitted
-Ticket 15 - Responsive and Improve CSS 
-Ticket 16 - Add bilingual feature (French/English) to the app
+Ticket 20 - Responsive
+Ticket 21 - Add a beverage section/component with improved CSS and CSS animation 
+Ticket 22 - Add a bilingual feature (French/English) to the app

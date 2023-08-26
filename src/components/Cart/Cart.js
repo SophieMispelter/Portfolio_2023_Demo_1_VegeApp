@@ -80,7 +80,7 @@ const Cart = (props) => {
                   <h4>Entrées:</h4>
                 </li>
                 {filterStarter.map((starter) => (
-                  <li>
+                  <li key={starter.id}>
                     <div className={classes["order-text"]}>
                       <span> {starter.name} </span>
                       <span>
@@ -97,7 +97,7 @@ const Cart = (props) => {
                   <h4>Plats:</h4>
                 </li>
                 {filterMain.map((main) => (
-                  <li>
+                  <li key={main.id}>
                     <div className={classes["order-text"]}>
                       <span> {main.name} </span>
                       <span>
@@ -114,7 +114,7 @@ const Cart = (props) => {
                   <h4>Desserts:</h4>
                 </li>
                 {filterDessert.map((dessert) => (
-                  <li>
+                  <li key={dessert.id}>
                     <div className={classes["order-text"]}>
                       <span> {dessert.name} </span>
                       <span>
