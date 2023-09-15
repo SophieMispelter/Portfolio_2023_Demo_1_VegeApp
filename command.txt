@@ -1,0 +1,6 @@
+build:
+    npm run build
+deploy:
+    firebase deploy
+stop deploy:
+    firebase hosting:disable
