@@ -13,55 +13,55 @@ import crumbleImg from "../assets/crumbleImg.png";
 
 const imgArray = [
   {
-    key: "m5",
+    key: "m05",
     img: festinRustiqueImg,
     alt: "A beautiful picture of the Festin Rustique meal!",
     credit: "https://larecette.net/polenta-cremeuse-et-champignons-frits/",
   },
   {
-    key: "m3",
+    key: "m03",
     img: caviarAubergineImg,
     alt: "A beautiful picture of the Caviar d'Aubergine meal!",
     credit:
       "https://turbigo-gourmandises.fr/recette-story-caviar-daubergines-cuisine-marie-claire-idees/",
   },
   {
-    key: "m1",
+    key: "m01",
     img: butternutSoupImg,
     alt: "A beautiful picture of the Velouté Gourmand meal!",
     credit:
       "https://clemfoodie.com/2017/11/18/soupe-de-courge-butternut-carottes-poireaux/#google_vignette",
   },
   {
-    key: "m2",
+    key: "m02",
     img: bruschettaImg,
     alt: "A beautiful picture of the Bruschettas meal!",
     credit:
       "https://www.cuisineaz.com/diaporamas/recettes-de-bruschetta-speciales-ete-2586/interne/1.aspx",
   },
   {
-    key: "m4",
+    key: "m04",
     img: springRollImg,
     alt: "A beautiful picture of the Rouleaux de Printemps meal!",
     credit:
       "https://naturelles-magazine.com/recette-rouleaux-de-printemps-vegetariens-colores/",
   },
   {
-    key: "m6",
+    key: "m06",
     img: veggeRiceImg,
     alt: "A beautiful picture of the Riz Pilaf aux Légumes meal!",
     credit:
       "https://www.cuisineactuelle.fr/recettes/riz-pilaf-vegetarien-194061",
   },
   {
-    key: "m7",
+    key: "m07",
     img: lentilGaletteImg,
     alt: "A beautiful picture of the Galette de lentilles meal!",
     credit:
       "https://www.750g.com/galettes-de-lentilles-et-patates-douces-r206369.htm",
   },
   {
-    key: "m8",
+    key: "m08",
     img: peasCurryImg,
     alt: "A beautiful picture of the Cury de Riz et Pois cassés meal!",
     credit:
@@ -87,7 +87,7 @@ const imgArray = [
     credit: "https://menu-vegetarien.com/yaourt-parfait/",
   },
   {
-    key: "m9",
+    key: "m09",
     img: crumbleImg,
     alt: "A beautiful picture of the Crumble aux Pommes et aux Noix meal!",
     credit:

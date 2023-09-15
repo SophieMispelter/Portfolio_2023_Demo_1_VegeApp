@@ -32,6 +32,7 @@
   color: #383838;
   font-size: 14px;
   padding: 4px 6px;
+  cursor: pointer;
 }
 .LngBtnActive {
   background-color: #99e2d09a;

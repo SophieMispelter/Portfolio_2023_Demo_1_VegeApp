@@ -3,6 +3,8 @@ import classes from "./AvailableMenu.module.css";
 import MealsCard from "./MealsCard";
 import { MEALS_URL_FR, MEALS_URL_EN } from "../../firebase/constants";
 import { useTranslation } from "react-i18next";
+import { storage } from "../../firebase/config";
+import { ref, getDownloadURL } from "firebase/storage";
 
 const AvailableMenu = () => {
   const { t, i18n } = useTranslation();
@@ -32,18 +34,67 @@ const AvailableMenu = () => {
       const responseData = await response.json();
       // console.log("responseData: ", responseData);
 
-      const mealsArray = [];
-      for (const key in responseData) {
-        mealsArray.push({
-          id: key,
-          name: responseData[key].name,
-          description: responseData[key].description,
-          price: responseData[key].price,
-          type: responseData[key].type,
+      // Create array for all the imgRef we retrieve from the loop:
+      let refArray = [];
+      for (const property in responseData) {
+        // console.log(
+        //   "responseData[property]: ",
+        //   responseData[property]
+        // );
+        const storageRef = ref(storage);
+        const imgRef = ref(storageRef, responseData[property].img.name);
+        // console.log("imgRef: ", imgRef);
+        refArray.push(imgRef);
+      }
+      // console.log("refArray: ", refArray);
+
+      // Map an array of data (refArray) into an array of promises:
+      let requests = refArray.map((ref) => getDownloadURL(ref));
+      // console.log("requests: ", requests);
+
+      // Get result of all promises:
+      const responses = await Promise.all(requests);
+      // console.log("responses: ", responses);
+
+      // Create an array with each element of responseData...
+      let responseDataArray = [];
+      for (const value in responseData) {
+        // console.log("value: ", value);
+        responseDataArray.push({
+          ...responseData[value],
+          id: value,
         });
       }
+      // ...in order to swap, in the img.name property, the img name with the correct img URL
+      let formattedResponsesDataArray = responseDataArray.map(
+        (element, index) => {
+          // console.log("index: ", index);
+          // console.log("element: ", element);
+          return {
+            ...element,
+            img: {
+              ...element.img,
+              name: responses[index],
+            },
+          };
+        }
+      );
+      // console.log("formattedResponsesDataArray: ", formattedResponsesDataArray);
 
-      setMeals(mealsArray);
+      // Old formatted data before moving img to Firebase
+      // const mealsArray = [];
+      // for (const key in responseData) {
+      //   mealsArray.push({
+      //     id: key,
+      //     name: responseData[key].name,
+      //     description: responseData[key].description,
+      //     price: responseData[key].price,
+      //     type: responseData[key].type,
+      //   });
+      // }
+      // setMeals(mealsArray);
+
+      setMeals(formattedResponsesDataArray);
       setIsLoading(false);
     };
 

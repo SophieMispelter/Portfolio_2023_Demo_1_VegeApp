@@ -10,6 +10,7 @@ const MealsCard = (props) => {
       id={meal.id}
       key={meal.id}
       name={meal.name}
+      img={meal.img}
       description={meal.description}
       price={meal.price}
       type={meal.type}

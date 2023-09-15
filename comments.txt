@@ -24,7 +24,9 @@ See detailed documentation: https://developer.mozilla.org/en-US/docs/Web/JavaScr
 Ticket 17 - Responsive Design of VegeApp for Mobile and Tablet devices
 Ticket 18 - Add a Bilingual Feature (French/English) to the App using i18next library for static datas
 Ticket 19 - Manage translating dynamic datas coming from HTTP request
-Ticket 19 - Add a beverage section/component with improved CSS and CSS animation
+Ticket 20 - Move IMG to Firebase Storage
+[Optional Ticket]
+Ticket 21 - Add a beverage section/component with improved CSS animation
 
 
 

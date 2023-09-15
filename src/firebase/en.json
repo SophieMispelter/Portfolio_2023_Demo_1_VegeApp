@@ -1,76 +1,136 @@
 {
   "meals_EN": {
-    "m1": {
+    "m01": {
       "name": "Gourmet Vegetable Velouté",
       "description": "A creamy soup with butternut squash and carrots, spiced with warm notes of cinnamon and nutmeg.",
       "price": 3.7,
-      "type": "Starter"
+      "type": "Starter",
+      "img": {
+        "name": "butternutSoup.png",
+        "alt": "A beautiful photo of our Gourmet Vegetable Velouté!",
+        "creditTo": "https://clemfoodie.com/2017/11/18/soupe-de-courge-butternut-carottes-poireaux/#google_vignette"
+      }
     },
-    "m2": {
+    "m02": {
       "name": "Mediterranean Bruschettas",
       "description": "Crispy toast topped with fresh tomatoes, kalamata olives, basil and a touch of extra virgin olive oil",
       "price": 4.2,
-      "type": "Starter"
+      "type": "Starter",
+      "img": {
+        "name": "bruschettaImg.png",
+        "alt": "A beautiful picture of our Mediterranean Bruskettas!",
+        "creditTo": "https://www.cuisineaz.com/diaporamas/recettes-de-bruschetta-speciales-ete-2586/interne/1.aspx"
+      }
     },
-    "m3": {
+    "m03": {
       "name": "Spicy eggplant caviar",
       "description": "A smoked eggplant puree with garlic, lemon, chilli and herbs, accompanied by toasted pita bread.",
       "price": 4.7,
-      "type": "Starter"
+      "type": "Starter",
+      "img": {
+        "name": "caviarAubergine.png",
+        "alt": "A beautiful picture of our Spicy Eggplant Caviar!",
+        "creditTo": "https://turbigo-gourmandises.fr/recette-story-caviar-daubergines-cuisine-marie-claire-idees/"
+      }
     },
-    "m4": {
+    "m04": {
       "name": "Crunchy Spring Rolls",
       "description": "Fresh rolls filled with crunchy vegetables such as cucumbers, peppers, avocados and fresh herbs, served with peanut sauce.",
       "price": 3.6,
-      "type": "Starter"
+      "type": "Starter",
+      "img": {
+        "name": "springRoll.png",
+        "alt": "A beautiful picture of our Crunchy Spring Rolls!",
+        "creditTo": "https://naturelles-magazine.com/recette-rouleaux-de-printemps-vegetariens-colores/"
+      }
     },
-    "m5": {
+    "m05": {
       "name": "Rustic Feast",
       "description": "Pan-fried wild mushrooms with creamy polenta and parsley.",
       "price": 7.5,
-      "type": "Main"
+      "type": "Main",
+      "img": {
+        "name": "Festin-Rustique-img.png",
+        "alt": "A beautiful photo of our Rustic Feast!",
+        "creditTo": "https://larecette.net/polenta-cremeuse-et-champignons-frits/"
+      }
     },
-    "m6": {
+    "m06": {
       "name": "Rice Pilaf with Spring Vegetables",
       "description": "Fragrant basmati rice cooked with seasonal vegetables such as peas, asparagus and carrots, topped with fresh herbs and lemon zest.",
       "price": 5.9,
-      "type": "Main"
+      "type": "Main",
+      "img": {
+        "name": "veggeRice.png",
+        "alt": "A beautiful picture of our Rice Pilaf with Spring Vegetables!",
+        "creditTo": "https://www.cuisineactuelle.fr/recettes/riz-pilaf-vegetarien-194061"
+      }
     },
-    "m7": {
+    "m07": {
       "name": "Delights of the Earth",
       "description": "Lentil cakes with vegetables, accompanied by sweet potato puree.",
       "price": 6.1,
-      "type": "Main"
+      "type": "Main",
+      "img": {
+        "name": "lentilGaletteImg.png",
+        "alt": "A beautiful photo of our Delights of the Earth!",
+        "creditTo": "https://www.750g.com/galettes-de-lentilles-et-patates-douces-r206369.htm"
+      }
     },
-    "m8": {
+    "m08": {
       "name": "Rice Curry and Split Peas",
       "description": "Curry of split peas and vegetables served with basmati rice.",
       "price": 7.3,
-      "type": "Main"
+      "type": "Main",
+      "img": {
+        "name": "peasCurryImg.png",
+        "alt": "A beautiful picture of our Rice Curry and Split Peas!",
+        "creditTo": "https://healthyliciouus.com/index.php/2023/03/06/curry-vert-de-pois-casses-et-brocolis/"
+      }
     },
-    "m9": {
+    "m09": {
       "name": "Apple and Walnut Crumble",
       "description": "Apples cooked to perfection, topped with a crispy mixture of crushed nuts, oats and brown sugar.",
       "price": 3.8,
-      "type": "Dessert"
+      "type": "Dessert",
+      "img": {
+        "name": "crumbleImg.png",
+        "alt": "A beautiful photo of our Apple and Walnut Crumble!",
+        "creditTo": "https://www.sequoia.bio/recettes/dessert/crumble-de-pommes-aux-dattes-et-aux-noix/"
+      }
     },
     "m10": {
       "name": "Velvety Dark Chocolate Mousse",
       "description": "Avocado-based dark chocolate mousse, sprinkled with crushed nuts.",
       "price": 4.5,
-      "type": "Dessert"
+      "type": "Dessert",
+      "img": {
+        "name": "chocoMousseImg.png",
+        "alt": "A beautiful photo of our Velvety Dark Chocolate Mousse!",
+        "creditTo": "https://www.healthymood.fr/recettes/mousse-au-chocolat-a-lavocat/"
+      }
     },
     "m11": {
       "name": "Red Fruit Tart",
       "description": "Delicious tarts with crispy crusts, topped with fresh berries and topped with a red fruit coulis.",
       "price": 4.2,
-      "type": "Dessert"
+      "type": "Dessert",
+      "img": {
+        "name": "fruitPieImg.png",
+        "alt": "A beautiful picture of our Red Fruit Tartlet!",
+        "creditTo": "https://www.cuisineactuelle.fr/recettes/tartelettes-aux-fruits-rouges-frais-266809"
+      }
     },
     "m12": {
       "name": "Perfect with Yogurt and Tropical Fruits",
       "description": "Layers of vegan yogurt alternated with juicy pieces of pineapple, mango and kiwi, sprinkled with grated coconut.",
       "price": 4.1,
-      "type": "Dessert"
+      "type": "Dessert",
+      "img": {
+        "name": "veggeYogourtImg.png",
+        "alt": "A beautiful picture of our Yogurt and Tropical Fruit Parfait!",
+        "creditTo": "https://menu-vegetarien.com/yaourt-parfait/"
+      }
     }
   },
   "orders_EN": {
@@ -84,7 +144,7 @@
           "type": "Dessert"
         },
         {
-          "id": "m4",
+          "id": "M04",
           "amount": 2,
           "name": "Crunchy Spring Rolls",
           "price": 7.2,
