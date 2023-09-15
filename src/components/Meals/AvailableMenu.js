@@ -1,26 +1,36 @@
 import React, { useEffect, useState } from "react";
 import classes from "./AvailableMenu.module.css";
 import MealsCard from "./MealsCard";
-import { MEALS_URL } from "../../firebase/constants";
+import { MEALS_URL_FR, MEALS_URL_EN } from "../../firebase/constants";
 import { useTranslation } from "react-i18next";
 
 const AvailableMenu = () => {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
   const [meals, setMeals] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
   const [httpError, setHttpError] = useState(null);
 
   useEffect(() => {
+    // console.log("in USE EFFECT");
     const fetchMeals = async () => {
       setIsLoading(true);
 
-      const response = await fetch(MEALS_URL);
+      // console.log("i18n.resolvedLanguage: ", i18n.resolvedLanguage);
+
+      let URL = MEALS_URL_EN;
+      if (i18n.resolvedLanguage === "fr") {
+        URL = MEALS_URL_FR;
+      }
+      // console.log("URL: ", URL);
+
+      const response = await fetch(URL);
 
       if (!response.ok) {
         throw new Error("Oops! Veuillez réessayer.");
       }
 
       const responseData = await response.json();
+      // console.log("responseData: ", responseData);
 
       const mealsArray = [];
       for (const key in responseData) {
@@ -41,7 +51,7 @@ const AvailableMenu = () => {
       setIsLoading(false);
       setHttpError(error.message);
     });
-  }, []);
+  }, [i18n.resolvedLanguage]);
 
   if (isLoading) {
     return (
@@ -66,9 +76,14 @@ const AvailableMenu = () => {
     );
   }
 
-  const filterStarter = meals.filter((item) => item.type === "starter");
-  const filterMain = meals.filter((item) => item.type === "main");
-  const filterDessert = meals.filter((item) => item.type === "dessert");
+  let filterStarter = meals.filter((item) => item.type === "Starter");
+  let filterMain = meals.filter((item) => item.type === "Main");
+  let filterDessert = meals.filter((item) => item.type === "Dessert");
+  if (i18n.resolvedLanguage === "fr") {
+    filterStarter = meals.filter((item) => item.type === "Entrée");
+    filterMain = meals.filter((item) => item.type === "Plat");
+    filterDessert = meals.filter((item) => item.type === "Dessert");
+  }
 
   return (
     <section className={classes.meals}>

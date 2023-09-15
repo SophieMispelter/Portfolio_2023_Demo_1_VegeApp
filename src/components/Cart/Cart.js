@@ -9,7 +9,7 @@ import { ORDERS_URL } from "../../firebase/constants";
 import { useTranslation } from "react-i18next";
 
 const Cart = (props) => {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
   const [isOrdered, setIsOrdered] = useState(false);
   const [didSubmitOrder, setDidSubmitOrder] = useState(false);
   const [orderTotalAmount, setOrderTotalAmount] = useState(0);
@@ -35,9 +35,15 @@ const Cart = (props) => {
 
   const totalAmount = `€${cartCtx.totalAmount.toFixed(2)}`;
 
-  const filterStarter = itemsArr.filter((item) => item.type === "starter");
-  const filterMain = itemsArr.filter((item) => item.type === "main");
-  const filterDessert = itemsArr.filter((item) => item.type === "dessert");
+  let filterStarter = itemsArr.filter((item) => item.type === "Starter");
+  let filterMain = itemsArr.filter((item) => item.type === "Main");
+  let filterDessert = itemsArr.filter((item) => item.type === "Dessert");
+
+  if (i18n.resolvedLanguage === "fr") {
+    filterStarter = itemsArr.filter((item) => item.type === "Entrée");
+    filterMain = itemsArr.filter((item) => item.type === "Plat");
+    filterDessert = itemsArr.filter((item) => item.type === "Dessert");
+  }
 
   const submitOrderHandler = async () => {
     await fetch(ORDERS_URL, {

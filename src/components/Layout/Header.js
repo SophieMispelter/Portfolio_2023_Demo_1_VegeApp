@@ -1,8 +1,9 @@
-import React, { Fragment } from "react";
+import React, { Fragment, useContext } from "react";
 import classes from "./Header.module.css";
 import mealsImage from "../../assets/veggie_lifestyle_5.jpg";
 import HeaderCartButton from "./HeaderCartButton";
 import { useTranslation } from "react-i18next";
+import CartContext from "../store/cart-context";
 
 const lngs = {
   en: { nativeName: "EN" },
@@ -10,27 +11,39 @@ const lngs = {
 };
 
 const Header = (props) => {
-  const { t, i18n } = useTranslation();
+  const { i18n } = useTranslation();
+  const cartCtx = useContext(CartContext);
+
+  const changeLanguageHandler = (lng) => {
+    // console.log("lng: ", lng);
+    i18n.changeLanguage(lng);
+    cartCtx.clearCart();
+  };
 
   return (
     <Fragment>
       <header className={classes.header}>
         <h1>VegeApp</h1>
-        <HeaderCartButton onClickCartButton={props.onShowCart} />
-        <div>
-          {Object.keys(lngs).map((lng) => {
-            // console.log("switch language");
-            return (
-              <button
-                type="submit"
-                key={lng}
-                onClick={() => i18n.changeLanguage(lng)}
-                disabled={i18n.resolvedLanguage === lng}
-              >
-                {lngs[lng].nativeName}
-              </button>
-            );
-          })}
+        <div className={classes.interactions}>
+          <HeaderCartButton onClickCartButton={props.onShowCart} />
+          <div>
+            {Object.keys(lngs).map((lng) => {
+              // console.log("switch language");
+              return (
+                <button
+                  className={`${classes.LngBtn} ${
+                    i18n.resolvedLanguage === lng ? classes.LngBtnActive : ""
+                  }`}
+                  type="submit"
+                  key={lng}
+                  onClick={changeLanguageHandler.bind(this, lng)}
+                  // disabled={i18n.resolvedLanguage === lng}
+                >
+                  {lngs[lng].nativeName}
+                </button>
+              );
+            })}
+          </div>
         </div>
       </header>
       <div className={classes["main-image"]}>

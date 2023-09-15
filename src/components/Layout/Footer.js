@@ -13,7 +13,7 @@ const Footer = () => {
     <footer className={classes.footer}>
       <ul>
         <li>
-          <a href="#">VegeApp</a>
+          <a href="/#">VegeApp</a>
         </li>
         <li>
           <ul className={classes["socialNetwork-icon"]}>
@@ -21,22 +21,35 @@ const Footer = () => {
               <a
                 href="https://www.linkedin.com/in/sophiemispelter"
                 target="_blank"
+                rel="noreferrer"
               >
                 <LinkedInIcon />
               </a>
             </li>
             <li>
-              <a href="https://www.facebook.com/" target="_blank">
+              <a
+                href="https://www.facebook.com/"
+                target="_blank"
+                rel="noreferrer"
+              >
                 <FacebookIcon />
               </a>
             </li>
             <li>
-              <a href="https://www.instagram.com/" target="_blank">
+              <a
+                href="https://www.instagram.com/"
+                target="_blank"
+                rel="noreferrer"
+              >
                 <InstagramIcon />
               </a>
             </li>
             <li>
-              <a href="https://www.tripadvisor.com/" target="_blank">
+              <a
+                href="https://www.tripadvisor.com/"
+                target="_blank"
+                rel="noreferrer"
+              >
                 <img
                   src={TripAdvisorIcon}
                   alt="TripAdvisor icon to see beautiful comments on our delicious veggie meals!"
@@ -49,12 +62,13 @@ const Footer = () => {
           <a
             href="mailto:&#97;&#115;&#109;&#105;s&#112;e%6c&#116;&#101;%72&#64;ya%68o%6f%2ef&#114;"
             target="_blank"
+            rel="noreferrer"
           >
             {t("footer.contact")}
           </a>
         </li>
         <li>
-          <a href="#">{t("footer.legal")}</a>
+          <a href="/#">{t("footer.legal")}</a>
         </li>
       </ul>
     </footer>

@@ -22,7 +22,8 @@ Ticket 15 - PART THREE: Sending Http POST Request
 Ticket 16 - Addition of meals images on MealItem Cards: as we are not using Firebase yet to store the meals images, use of the JS Map.prototype.set -> The set() method of Map instances adds or updates an entry in this map with a specified key and a value.
 See detailed documentation: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map/set
 Ticket 17 - Responsive Design of VegeApp for Mobile and Tablet devices
-Ticket 18 - Add a Bilingual Feature (French/English) to the App
+Ticket 18 - Add a Bilingual Feature (French/English) to the App using i18next library for static datas
+Ticket 19 - Manage translating dynamic datas coming from HTTP request
 Ticket 19 - Add a beverage section/component with improved CSS and CSS animation
 
 

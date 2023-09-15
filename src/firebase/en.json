@@ -1,0 +1,96 @@
+{
+  "meals_EN": {
+    "m1": {
+      "name": "Gourmet Vegetable Velouté",
+      "description": "A creamy soup with butternut squash and carrots, spiced with warm notes of cinnamon and nutmeg.",
+      "price": 3.7,
+      "type": "Starter"
+    },
+    "m2": {
+      "name": "Mediterranean Bruschettas",
+      "description": "Crispy toast topped with fresh tomatoes, kalamata olives, basil and a touch of extra virgin olive oil",
+      "price": 4.2,
+      "type": "Starter"
+    },
+    "m3": {
+      "name": "Spicy eggplant caviar",
+      "description": "A smoked eggplant puree with garlic, lemon, chilli and herbs, accompanied by toasted pita bread.",
+      "price": 4.7,
+      "type": "Starter"
+    },
+    "m4": {
+      "name": "Crunchy Spring Rolls",
+      "description": "Fresh rolls filled with crunchy vegetables such as cucumbers, peppers, avocados and fresh herbs, served with peanut sauce.",
+      "price": 3.6,
+      "type": "Starter"
+    },
+    "m5": {
+      "name": "Rustic Feast",
+      "description": "Pan-fried wild mushrooms with creamy polenta and parsley.",
+      "price": 7.5,
+      "type": "Main"
+    },
+    "m6": {
+      "name": "Rice Pilaf with Spring Vegetables",
+      "description": "Fragrant basmati rice cooked with seasonal vegetables such as peas, asparagus and carrots, topped with fresh herbs and lemon zest.",
+      "price": 5.9,
+      "type": "Main"
+    },
+    "m7": {
+      "name": "Delights of the Earth",
+      "description": "Lentil cakes with vegetables, accompanied by sweet potato puree.",
+      "price": 6.1,
+      "type": "Main"
+    },
+    "m8": {
+      "name": "Rice Curry and Split Peas",
+      "description": "Curry of split peas and vegetables served with basmati rice.",
+      "price": 7.3,
+      "type": "Main"
+    },
+    "m9": {
+      "name": "Apple and Walnut Crumble",
+      "description": "Apples cooked to perfection, topped with a crispy mixture of crushed nuts, oats and brown sugar.",
+      "price": 3.8,
+      "type": "Dessert"
+    },
+    "m10": {
+      "name": "Velvety Dark Chocolate Mousse",
+      "description": "Avocado-based dark chocolate mousse, sprinkled with crushed nuts.",
+      "price": 4.5,
+      "type": "Dessert"
+    },
+    "m11": {
+      "name": "Red Fruit Tart",
+      "description": "Delicious tarts with crispy crusts, topped with fresh berries and topped with a red fruit coulis.",
+      "price": 4.2,
+      "type": "Dessert"
+    },
+    "m12": {
+      "name": "Perfect with Yogurt and Tropical Fruits",
+      "description": "Layers of vegan yogurt alternated with juicy pieces of pineapple, mango and kiwi, sprinkled with grated coconut.",
+      "price": 4.1,
+      "type": "Dessert"
+    }
+  },
+  "orders_EN": {
+    "id-1": {
+      "orderedItems": [
+        {
+          "id": "M12",
+          "amount": 1,
+          "name": "Perfect with Yogurt and Tropical Fruits",
+          "price": 4.1,
+          "type": "Dessert"
+        },
+        {
+          "id": "m4",
+          "amount": 2,
+          "name": "Crunchy Spring Rolls",
+          "price": 7.2,
+          "type": "Starter"
+        }
+      ]
+    }
+  }
+}
